@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <h3>Or select a predefined username:</h3>
+        <button type="button" onclick="setUsername('admin')">admin</button>
+        <button type="button" onclick="setUsername('user')">user</button>
+        <button type="button" onclick="setUsername('guest')">guest</button>
+        <br><br>
+
+        <h3>Or select a predefined password:</h3>
+        <button type="button" onclick="setPassword('1234')">1234</button>
+        <button type="button" onclick="setPassword('password')">password</button>
+        <button type="button" onclick="setPassword('guest')">guest</button>
+        <br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        // Функция для установки значения username
+        function setUsername(value) {
+            document.getElementById('username').value = value;
+        }
+
+        // Функция для установки значения password
+        function setPassword(value) {
+            document.getElementById('password').value = value;
+        }
+    </script>
+</body>
+</html>
